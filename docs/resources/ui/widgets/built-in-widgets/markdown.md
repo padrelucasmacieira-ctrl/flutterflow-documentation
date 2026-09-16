@@ -1,23 +1,74 @@
 ---
+slug: markdown
+title: Markdown
+description: Learn how to display and customize Markdown content in your FlutterFlow app.
 tags: [Base Elements]
+keywords: [Markdown, Widget, Formatted Text, Dynamic Content]
 ---
 
 # Markdown
 
-The Markdown widget is used to input and display text using [Markdown syntax](https://www.markdownguide.org/basic-syntax/). It allows you to format text easily, without the complexity of a full-fledged WYSIWYG (What You See Is What You Get) editor or the need to write HTML code.
+The **Markdown** widget renders formatted content written using [Markdown syntax](https://www.markdownguide.org/basic-syntax/). It supports content such as headings, emphasized text, lists, links, quotes, and code without requiring HTML.
 
-You could use this widget in various applications like note-taking apps, forums, and blogging platforms. They are particularly popular in technical and coding communities for their ease of formatting code snippets and descriptions.
+Use this widget to display notes, documentation, forum posts, release notes, help content, or other formatted text in your app.
 
-![img.png](imgs/img.png)
+## Adding a Markdown Widget
 
-## Adding Markdown widget
+1. Open the [Widget Palette](../../../../intro/ff-ui/widget-palette.md) and add the **Markdown** widget from **Base Elements**.
+2. Select the widget and open the [Properties Panel](../../../../intro/ff-ui/builder.md#properties-panel).
+3. Under **Data**, enter fixed Markdown content or set the value from a variable. Dynamic content is useful for displaying formatted text from a database, an API response, or generated app content.
 
-To add a Markdown widget:
+For example, you can use Markdown to display a privacy policy:
 
-1. Open the [Widget Palette](../../../../intro/ff-ui/widget-palette.md) and locate the **Markdown** widget under the **Base Elements** tab. You can either drag it into your desired location or add it directly from the widget tree.
-2. To display the markdown content, move to the [Properties Panel](../../../../intro/ff-ui/builder.md#properties-panel) and enter the text inside the **Data** section.
-3. Optionally, you have the choice to make your Markdown content selectable. This can be adjusted using the **Selectable** property.
+```md
+# Privacy Policy
 
-<div class="video-container"><iframe src="https://www.loom.
-com/embed/e4c33cdb4bbf44e194dccbb3c357a317?sid=24c80624-af62-47d4-a60f-53b5f1faeaec" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+**Last updated:** September 16, 2026
 
+We use your information to provide and improve our services.
+
+## Information we collect
+
+- Account information
+- App usage data
+
+[Contact our privacy team](mailto:privacy@example.com)
+```
+
+<div style={{
+    position: 'relative',
+    paddingBottom: 'calc(56.67989417989418% + 41px)', // Keeps the aspect ratio and additional padding
+    height: 0,
+    width: '100%'}}>
+    <iframe
+        src="https://demo.arcade.software/PZ0RUIsNIpBhyLIXqVEz?embed&show_copy_link=true"
+        title="Adding and configuring a Markdown widget"
+        style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            colorScheme: 'light'
+        }}
+        frameborder="0"
+        loading="lazy"
+        webkitAllowFullScreen
+        mozAllowFullScreen
+        allowFullScreen
+        allow="clipboard-write">
+    </iframe>
+</div>
+
+## Customizing the Markdown Widget
+
+### Making Content Selectable
+
+Enable **Selectable** to allow users to select and copy text from the rendered Markdown content.
+
+## Best Practices
+
+- Use a consistent heading hierarchy to keep long content easy to scan.
+- Test long and dynamic content on different screen sizes to prevent clipping or unexpected overflow.
+- Review Markdown received from external sources before displaying it, especially links.
+- Use descriptive link text and verify that links work on every target platform.
